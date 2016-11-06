@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -215,11 +216,49 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Turret" sid="939900078812793">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="139701217190301">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577282403791736" speed="5">
+                    <frame duration="1" hotspotX="0.372" hotspotY="0.476">
+                        <image-point name="Imagepoint 1" x="0.988" y="0.348" />
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Jello" sid="794499581241041">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="580817813731287">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="195039911360123">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243779070689072" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Start.xml</layout>
         <layout>StdMap.xml</layout>
+        <layout>Dangerzone.xml</layout>
         <layout>End.xml</layout>
     </layout-folder>
     <event-folder>

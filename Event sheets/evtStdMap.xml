@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evtStdMap</name>
+    <events>
+        <variable constant="0" name="score_limit" sid="253182647491602" static="0" type="number">10</variable>
+        <variable constant="0" name="p1_score" sid="486288274067367" static="0" type="number">0</variable>
+        <variable constant="0" name="p2_score" sid="596340124072137" static="0" type="number">0</variable>
+        <variable constant="0" name="p1_uid" sid="924370645659387" static="0" type="number">0</variable>
+        <variable constant="0" name="p2_uid" sid="425656136120496" static="0" type="number">0</variable>
+        <event-block sid="561457042790966">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="137570478861788" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="713451652180376" type="P1">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="319863198968307">
+            <conditions>
+                <condition id="2" name="Key is down" sid="133289327979789" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="455186052608940" type="P1">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458904475588152">
+            <conditions>
+                <condition id="2" name="Key is down" sid="282478984049357" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="800122354663852" type="P1">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468570264920122">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="737659724976703" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="12" name="Fall through" sid="266434288279489" type="P1" />
+            </actions>
+        </event-block>
+        <event-block sid="781806273412265">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="356875505735635" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="413796078047614" type="P1">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="524590330536783" type="Bullet">
+                    <param id="0" name="Instance variable">spawned_by</param>
+                    <param id="1" name="Value">&quot;P1&quot;</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="353757981615373" type="Bullet">
+                    <param id="0" name="Angle">P1.Platform.MovingAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326607282425015">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="160632310575700" type="Keyboard">
+                    <param id="0" name="Key">67 (C)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="109470213447584" type="P1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="322822405250125" type="P1">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="386726770435897" type="P1">
+                    <param id="0" name="X">P2.X</param>
+                    <param id="1" name="Y">P2.Y</param>
+                </action>
+                <action id="-17" name="Move forward" sid="843082242683541" type="P1">
+                    <param id="0" name="Distance">160</param>
+                </action>
+                <action id="-16" name="Wait" sid="905414342116895" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-8" name="Set angle" sid="116337720178064" type="P1">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="955743989800710" type="P1">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="548811585907498" type="P1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432121678233595">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="721362328957900" type="Keyboard">
+                    <param id="0" name="Key">79 (O)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="277253353816985" type="P2">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="131753373351005">
+            <conditions>
+                <condition id="2" name="Key is down" sid="567431574790325" type="Keyboard">
+                    <param id="0" name="Key">75 (K)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="925767066751968" type="P2">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="905971977401121">
+            <conditions>
+                <condition id="2" name="Key is down" sid="593850702157895" type="Keyboard">
+                    <param id="0" name="Key">186 (;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="452383171291662" type="P2">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="885701869460589">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="708968298440207" type="Keyboard">
+                    <param id="0" name="Key">76 (L)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="12" name="Fall through" sid="137399432206704" type="P2" />
+            </actions>
+        </event-block>
+        <event-block sid="743130898230667">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="165353943942017" type="Keyboard">
+                    <param id="0" name="Key">73 (I)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="582996347587114" type="P2">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="985201850294220" type="Bullet">
+                    <param id="0" name="Instance variable">spawned_by</param>
+                    <param id="1" name="Value">&quot;P2&quot;</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="552638134737072" type="Bullet">
+                    <param id="0" name="Angle">180 - P2.Platform.MovingAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="124277725960397">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="180852050740334" type="Keyboard">
+                    <param id="0" name="Key">78 (N)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="434905952998988" type="P2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="899596939113414" type="P2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="492640611920599" type="P2">
+                    <param id="0" name="X">P1.X</param>
+                    <param id="1" name="Y">P1.Y</param>
+                </action>
+                <action id="-17" name="Move forward" sid="818198492712999" type="P2">
+                    <param id="0" name="Distance">160</param>
+                </action>
+                <action id="-16" name="Wait" sid="249413404246557" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-8" name="Set angle" sid="813331541973557" type="P2">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="796607760904203" type="P2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="720574201473787" type="P2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="684557100703644">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="685851203342322" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="880937488142786" type="System">
+                    <param id="0" name="Variable">p1_score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="695001453066664" type="System">
+                    <param id="0" name="Variable">p2_score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="439487318801484" type="P1Spawn">
+                    <param id="0" name="Object">P1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="661139157955660" type="System">
+                    <param id="0" name="Variable">p1_uid</param>
+                    <param id="1" name="Value">P1.UID</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="726412749959691" type="P2Spawn">
+                    <param id="0" name="Object">P2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="260397621327587" type="System">
+                    <param id="0" name="Variable">p2_uid</param>
+                    <param id="1" name="Value">p2.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="460359338620812">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="827935395170175" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="460129116436528">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="503196698722318" type="P1">
+                            <param id="0" name="Instance variable">hitpoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="191983402531406" type="P1" />
+                    </actions>
+                </event-block>
+                <event-block sid="710144368404250">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="158390210576148" type="P2">
+                            <param id="0" name="Instance variable">hitpoints</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="837982932195890" type="P2" />
+                    </actions>
+                </event-block>
+                <event-block sid="338484667200409">
+                    <conditions>
+                        <condition id="-31" inverted="1" name="Object UID exists" sid="461384792533979" type="System">
+                            <param id="0" name="UID">p1_uid</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="256868728062881" type="P1Spawn">
+                            <param id="0" name="Object">P1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="408978215229464" type="System">
+                            <param id="0" name="Variable">p1_uid</param>
+                            <param id="1" name="Value">P1.UID</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="442261190999461" type="System">
+                            <param id="0" name="Variable">p2_score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="521191761237865">
+                    <conditions>
+                        <condition id="-31" inverted="1" name="Object UID exists" sid="467052648167755" type="System">
+                            <param id="0" name="UID">p2_uid</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="139326995889769" type="P2Spawn">
+                            <param id="0" name="Object">P2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="228879109105515" type="System">
+                            <param id="0" name="Variable">p2_uid</param>
+                            <param id="1" name="Value">p2.UID</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="422572765558627" type="System">
+                            <param id="0" name="Variable">p1_score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="823159379332905">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="687553434931784" type="System">
+                            <param id="0" name="Variable">p1_score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">score_limit</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="215478650382420" type="System">
+                            <param id="0" name="Variable">p2_score</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">score_limit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="454032437926022" type="System">
+                            <param id="0" name="Layout">End</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="244422311161054">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="412523347654802" type="Bullet">
+                    <param id="0" name="Object">P1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="824382037328251" type="Bullet">
+                    <param id="0" name="Instance variable">spawned_by</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;P1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="834375755121054" type="Bullet" />
+                <action id="-12" name="Subtract from" sid="853254494069534" type="P1">
+                    <param id="0" name="Instance variable">hitpoints</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="989178052971664">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="572224605971379" type="Bullet">
+                    <param id="0" name="Object">P2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="439013309970684" type="Bullet">
+                    <param id="0" name="Instance variable">spawned_by</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;P2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="967854020184695" type="Bullet" />
+                <action id="-12" name="Subtract from" sid="876295401302082" type="P2">
+                    <param id="0" name="Instance variable">hitpoints</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

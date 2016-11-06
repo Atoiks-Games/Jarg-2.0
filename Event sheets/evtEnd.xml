@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evtEnd</name>
+    <events>
+        <event-block sid="969387892671755">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="364780009150955" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="872890144692315" type="Text">
+                    <param id="0" name="Text">&quot;Player &quot; &amp; (p1_score = score_limit ? &quot;1&quot; : &quot;2&quot;) &amp; &quot; won&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

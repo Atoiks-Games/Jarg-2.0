@@ -7,6 +7,8 @@
         <variable constant="0" name="p1_score" sid="486288274067367" static="0" type="number">0</variable>
         <variable constant="0" name="p2_score" sid="596340124072137" static="0" type="number">0</variable>
         <variable constant="0" name="p1_uid" sid="924370645659387" static="0" type="number">0</variable>
+        <variable constant="0" name="LastMoved2" sid="522927471767583" static="0" type="number">90</variable>
+        <variable constant="0" name="LastMoved1" sid="588830252820171" static="0" type="number">90</variable>
         <variable constant="0" name="p2_uid" sid="425656136120496" static="0" type="number">0</variable>
         <event-block sid="561457042790966">
             <conditions>
@@ -17,6 +19,10 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="713451652180376" type="P1">
                     <param id="0" name="Control">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="261741494300450" type="System">
+                    <param id="0" name="Variable">LastMoved1</param>
+                    <param id="1" name="Value">270</param>
                 </action>
             </actions>
         </event-block>
@@ -30,6 +36,10 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="455186052608940" type="P1">
                     <param id="0" name="Control">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="478565312445030" type="System">
+                    <param id="0" name="Variable">LastMoved1</param>
+                    <param id="1" name="Value">P1.Platform.MovingAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="458904475588152">
@@ -42,6 +52,10 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="800122354663852" type="P1">
                     <param id="0" name="Control">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="574914866018167" type="System">
+                    <param id="0" name="Variable">LastMoved1</param>
+                    <param id="1" name="Value">P1.Platform.MovingAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="468570264920122">
@@ -52,6 +66,14 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="12" name="Fall through" sid="266434288279489" type="P1" />
+                <action id="-9" name="Set value" sid="343841177683823" type="System">
+                    <param id="0" name="Variable">LastMoved1</param>
+                    <param id="1" name="Value">90</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="684385729080819" type="P1Spawn">
+                    <param id="0" name="Object">P2</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="781806273412265">
@@ -71,14 +93,14 @@
                     <param id="1" name="Value">&quot;P1&quot;</param>
                 </action>
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="353757981615373" type="Bullet">
-                    <param id="0" name="Angle">P1.Platform.MovingAngle</param>
+                    <param id="0" name="Angle">LastMoved1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="326607282425015">
             <conditions>
                 <condition id="0" name="On key pressed" sid="160632310575700" type="Keyboard">
-                    <param id="0" name="Key">67 (C)</param>
+                    <param id="0" name="Key">81 (Q)</param>
                 </condition>
             </conditions>
             <actions>
@@ -109,6 +131,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="570580781854513">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="117880848975254" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="480169280903806" type="P1Spawn">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P1.X</param>
+                    <param id="2" name="Y">P1.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="432121678233595">
             <conditions>
                 <condition id="0" name="On key pressed" sid="721362328957900" type="Keyboard">
@@ -118,6 +155,10 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="277253353816985" type="P2">
                     <param id="0" name="Control">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="969793771393583" type="System">
+                    <param id="0" name="Variable">LastMoved2</param>
+                    <param id="1" name="Value">270</param>
                 </action>
             </actions>
         </event-block>
@@ -131,6 +172,10 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="925767066751968" type="P2">
                     <param id="0" name="Control">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="323167012605896" type="System">
+                    <param id="0" name="Variable">LastMoved2</param>
+                    <param id="1" name="Value">P2.Platform.MovingAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="905971977401121">
@@ -143,6 +188,10 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="452383171291662" type="P2">
                     <param id="0" name="Control">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="511029920786284" type="System">
+                    <param id="0" name="Variable">LastMoved2</param>
+                    <param id="1" name="Value">P2.Platform.MovingAngle</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="885701869460589">
@@ -153,6 +202,14 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="12" name="Fall through" sid="137399432206704" type="P2" />
+                <action id="-9" name="Set value" sid="648218203309322" type="System">
+                    <param id="0" name="Variable">LastMoved2</param>
+                    <param id="1" name="Value">90</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="287399031994544" type="P2Spawn">
+                    <param id="0" name="Object">P1</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="743130898230667">
@@ -171,15 +228,15 @@
                     <param id="0" name="Instance variable">spawned_by</param>
                     <param id="1" name="Value">&quot;P2&quot;</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="552638134737072" type="Bullet">
-                    <param id="0" name="Angle">180 - P2.Platform.MovingAngle</param>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="751417490743426" type="Bullet">
+                    <param id="0" name="Angle">LastMoved2</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="124277725960397">
             <conditions>
                 <condition id="0" name="On key pressed" sid="180852050740334" type="Keyboard">
-                    <param id="0" name="Key">78 (N)</param>
+                    <param id="0" name="Key">80 (P)</param>
                 </condition>
             </conditions>
             <actions>
@@ -207,6 +264,21 @@
                 </action>
                 <action id="-15" name="Set visible" sid="720574201473787" type="P2">
                     <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="134983582086044">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="139655499614488" type="Keyboard">
+                    <param id="0" name="Key">85 (U)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="393646192569260" type="P2Spawn">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P2.X</param>
+                    <param id="2" name="Y">P2.Y</param>
+                    <param id="3" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
@@ -249,6 +321,17 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-block any="1" sid="954406519740102">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="514406773497175" type="P2Spawn" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="349528005495466" type="P2Spawn">
+                            <param id="0" name="X">662</param>
+                            <param id="1" name="Y">222</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="460129116436528">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="503196698722318" type="P1">
@@ -333,6 +416,17 @@
                     <actions>
                         <action id="-2" name="Go to layout" sid="454032437926022" type="System">
                             <param id="0" name="Layout">End</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="364697454400007">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="499930989780570" type="P1Spawn" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="428786739376334" type="P1Spawn">
+                            <param id="0" name="X">197</param>
+                            <param id="1" name="Y">227</param>
                         </action>
                     </actions>
                 </event-block>

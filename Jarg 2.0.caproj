@@ -18,8 +18,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
@@ -96,6 +99,9 @@
                 <behavior-type name="Solid" sid="686478156322766">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Physics" sid="565352702575075">
+                    <behavior id="Physics" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244808833864217" speed="5">
@@ -108,17 +114,33 @@
         </object-type>
         <object-type name="P1Spawn" sid="162262644034790">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="519789489928064">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="847543417388709">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="605188688141948" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.483444" hotspotY="0.483221" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="P2Spawn" sid="635974697669978">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="941223497312831">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="628754254391597">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="324187022677649" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.478673" hotspotY="0.472803" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -136,6 +158,9 @@
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="558281741238203">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="614975645951179">
+                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -173,6 +198,22 @@
         </object-type>
         <object-type name="StartBtn" sid="191349659144116">
             <plugin id="Button" />
+        </object-type>
+        <object-type name="Jumpthrough" sid="156743554575876">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="483954577873113">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="663266975691534">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233156125861610" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

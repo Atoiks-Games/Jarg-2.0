@@ -145,6 +145,18 @@
                     <param id="2" name="Y">P1.Y</param>
                     <param id="3" name="Image point">0</param>
                 </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="529443084253430" type="P2Spawn">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P1.X</param>
+                    <param id="2" name="Y">P1.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="966442933926792" type="Jello">
+                    <param id="0" name="Force">250</param>
+                    <param id="1" name="X">P1.X</param>
+                    <param id="2" name="Y">P1.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="432121678233595">
@@ -281,6 +293,18 @@
                     <param id="2" name="Y">P2.Y</param>
                     <param id="3" name="Image point">0</param>
                 </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="321813037722841" type="P1Spawn">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P2.X</param>
+                    <param id="2" name="Y">P2.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="335056761325276" type="Jello">
+                    <param id="0" name="Force">250</param>
+                    <param id="1" name="X">P2.X</param>
+                    <param id="2" name="Y">P2.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="684557100703644">
@@ -328,6 +352,12 @@
             <actions>
                 <action behavior="Bullet" id="2" name="Set gravity" sid="738550858558753" type="Bullet">
                     <param id="0" name="Gravity">-(Bullet.Bullet.Gravity)</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="314898103414065" type="P1">
+                    <param id="0" name="Gravity">-P1.Platform.Gravity</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="578926852785248" type="P2">
+                    <param id="0" name="Gravity">-P2.Platform.Gravity</param>
                 </action>
             </actions>
             <sub-events>
@@ -534,6 +564,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="393380745708855" type="Bullet" />
+                <action id="-7" name="Set size" sid="245952122487338" type="Jello">
+                    <param id="0" name="Width">abs(Jello.Width)-1</param>
+                    <param id="1" name="Height">abs(Jello.Height)-1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="388511978254860">
@@ -564,6 +598,33 @@
                 </action>
                 <action id="-8" name="Set angle" sid="704573985932821" type="Bullet">
                     <param id="0" name="Angle">Turret.Angle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164321998377266">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="481959030518794" type="Jello">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Width">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="270766805882115" type="Jello">
+                    <param id="0" name="X">random(350, 500)</param>
+                    <param id="1" name="Y">random(300, 400)</param>
+                </action>
+                <action id="-6" name="Set height" sid="957395763673077" type="Jello">
+                    <param id="0" name="Height">56</param>
+                </action>
+                <action id="-5" name="Set width" sid="688349405917500" type="Jello">
+                    <param id="0" name="Width">56</param>
+                </action>
+                <action behavior="Jumpthru" id="0" name="Set enabled" sid="463309420978406" type="Jello">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="305504407680089" type="Jello">
+                    <param id="0" name="Animation">&quot;Phase&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

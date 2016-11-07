@@ -246,9 +246,28 @@
                 <behavior-type name="Physics" sid="195039911360123">
                     <behavior id="Physics" />
                 </behavior-type>
+                <behavior-type name="Wrap" sid="126423019371144">
+                    <behavior id="wrap" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243779070689072" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Phase" pingpong="0" repeatcount="1" repeatto="0" sid="917067828515700" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Phasebar" sid="809109266491329">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="301990854828504">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160866928040980" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -257,8 +276,10 @@
     <families />
     <layout-folder>
         <layout>Start.xml</layout>
-        <layout>StdMap.xml</layout>
+        <layout>Standard.xml</layout>
         <layout>Dangerzone.xml</layout>
+        <layout>Candyland.xml</layout>
+        <layout>Thunderstorm.xml</layout>
         <layout>End.xml</layout>
     </layout-folder>
     <event-folder>

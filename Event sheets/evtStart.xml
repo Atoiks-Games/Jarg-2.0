@@ -13,5 +13,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="562779307663645">
+            <conditions>
+                <condition id="0" name="On clicked" sid="356269254945163" type="HelpBtn" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="807893603904661" type="System">
+                    <param id="0" name="Layout">Help</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

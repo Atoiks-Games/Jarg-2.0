@@ -129,11 +129,11 @@
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>450</max-speed>
-                                <acceleration>1500</acceleration>
+                                <max-speed>1600</max-speed>
+                                <acceleration>3000</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
+                                <gravity>3000</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
@@ -178,6 +178,30 @@
                     <world>
                         <x>270</x>
                         <y>332</y>
+                        <z>0</z>
+                        <width>314</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="HelpBtn" uid="78">
+                    <properties>
+                        <type>Button</type>
+                        <text>Help</text>
+                        <tooltip>You need some help!</tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>270</x>
+                        <y>365</y>
                         <z>0</z>
                         <width>314</width>
                         <height>20</height>

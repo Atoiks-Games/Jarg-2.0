@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evtHelp</name>
+    <events>
+        <event-block sid="670100837934024">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="310858116320653" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="412508073629328" type="Text4">
+                    <param id="0" name="Text">&quot;Player 1&quot; &amp; newline &amp; &quot;W, A, S, D to move&quot; &amp; newline &amp; &quot;E to fire&quot; &amp; newline &amp; &quot;Q, R for special move&quot; &amp; newline &amp; newline &amp; &quot;Player 2&quot; &amp; newline &amp; &quot;O, K, L, ; to move&quot; &amp; newline &amp; &quot;I to fire&quot; &amp; newline &amp; &quot;P, U for special move&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826656061563996">
+            <conditions>
+                <condition id="0" name="On clicked" sid="950443111630315" type="ToHomeBtn" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="835949017989899" type="System">
+                    <param id="0" name="Layout">Start</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

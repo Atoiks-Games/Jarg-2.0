@@ -272,6 +272,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text4" sid="824727236705796">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HelpBtn" sid="227847129752727">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="ToHomeBtn" sid="850102908010688">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -281,11 +290,13 @@
         <layout>Candyland.xml</layout>
         <layout>Thunderstorm.xml</layout>
         <layout>End.xml</layout>
+        <layout>Help.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>evtStdMap.xml</event-sheet>
         <event-sheet>evtEnd.xml</event-sheet>
         <event-sheet>evtStart.xml</event-sheet>
+        <event-sheet>evtHelp.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="6" />

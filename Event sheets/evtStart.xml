@@ -8,8 +8,8 @@
                 <condition id="0" name="On clicked" sid="112222673341488" type="StartBtn" />
             </conditions>
             <actions>
-                <action id="-43" name="Go to next/previous layout" sid="430662894420448" type="System">
-                    <param id="0" name="Which">0</param>
+                <action id="-25" name="Go to layout (by name)" sid="430662894420448" type="System">
+                    <param id="0" name="Layout">mapselList.SelectedText</param>
                 </action>
             </actions>
         </event-block>

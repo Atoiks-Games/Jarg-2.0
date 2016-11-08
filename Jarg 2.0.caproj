@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
@@ -280,6 +281,9 @@
         </object-type>
         <object-type name="ToHomeBtn" sid="850102908010688">
             <plugin id="Button" />
+        </object-type>
+        <object-type name="mapselList" sid="484948662020893">
+            <plugin id="List" />
         </object-type>
     </object-folder>
     <families />

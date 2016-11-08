@@ -285,6 +285,9 @@
         <object-type name="mapselList" sid="484948662020893">
             <plugin id="List" />
         </object-type>
+        <object-type name="Text5" sid="442655129277031">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

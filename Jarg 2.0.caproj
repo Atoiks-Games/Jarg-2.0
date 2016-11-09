@@ -288,14 +288,28 @@
         <object-type name="Text5" sid="442655129277031">
             <plugin id="Text" />
         </object-type>
+        <object-type name="DeathBlock" sid="769923255084181">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="206684329744993">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347422830981414" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Start.xml</layout>
-        <layout>Standard.xml</layout>
-        <layout>Dangerzone.xml</layout>
+        <layout>Arena.xml</layout>
+        <layout>Pitfall.xml</layout>
         <layout>Candyland.xml</layout>
         <layout>Thunderstorm.xml</layout>
+        <layout>Encounter.xml</layout>
         <layout>End.xml</layout>
         <layout>Help.xml</layout>
     </layout-folder>

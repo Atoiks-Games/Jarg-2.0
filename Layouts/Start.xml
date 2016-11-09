@@ -212,7 +212,7 @@
                 </instance>
                 <instance type="mapselList" uid="80">
                     <properties>
-                        <items>Standard; Dangerzone; Candyland; Thunderstorm</items>
+                        <items>Arena; Pitfall; Candyland; Thunderstorm; Encounter</items>
                         <tooltip>The map you will be playing in</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>

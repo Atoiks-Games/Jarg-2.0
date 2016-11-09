@@ -157,6 +157,12 @@
                     <param id="2" name="Y">P1.Y</param>
                     <param id="3" name="Image point">0</param>
                 </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="677213416921729" type="DeathBlock">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P1.X</param>
+                    <param id="2" name="Y">P1.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="432121678233595">
@@ -305,6 +311,12 @@
                     <param id="2" name="Y">P2.Y</param>
                     <param id="3" name="Image point">0</param>
                 </action>
+                <action behavior="Physics" id="1" name="Apply force towards position" sid="459212323544176" type="DeathBlock">
+                    <param id="0" name="Force">10</param>
+                    <param id="1" name="X">P2.X</param>
+                    <param id="2" name="Y">P2.Y</param>
+                    <param id="3" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="684557100703644">
@@ -353,12 +365,6 @@
                 <action behavior="Bullet" id="2" name="Set gravity" sid="738550858558753" type="Bullet">
                     <param id="0" name="Gravity">-(Bullet.Bullet.Gravity)</param>
                 </action>
-                <action behavior="Platform" id="5" name="Set gravity" sid="314898103414065" type="P1">
-                    <param id="0" name="Gravity">-P1.Platform.Gravity</param>
-                </action>
-                <action behavior="Platform" id="5" name="Set gravity" sid="578926852785248" type="P2">
-                    <param id="0" name="Gravity">-P2.Platform.Gravity</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="756641420049281">
@@ -377,6 +383,12 @@
                         <action behavior="Physics" id="12" name="Set world gravity" sid="957507698482317" type="P1Spawn">
                             <param id="0" name="Gravity">Gravity</param>
                         </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="314898103414065" type="P1">
+                            <param id="0" name="Gravity">-P1.Platform.Gravity</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="578926852785248" type="P2">
+                            <param id="0" name="Gravity">-P2.Platform.Gravity</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="800429568776318">
@@ -390,6 +402,12 @@
                         </action>
                         <action behavior="Physics" id="12" name="Set world gravity" sid="973647227334911" type="P1Spawn">
                             <param id="0" name="Gravity">Gravity</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="511318497102381" type="P1">
+                            <param id="0" name="Gravity">P1.Platform.Gravity</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="785271246070013" type="P2">
+                            <param id="0" name="Gravity">P2.Platform.Gravity</param>
                         </action>
                     </actions>
                 </event-block>
@@ -626,6 +644,26 @@
                     <param id="0" name="Animation">&quot;Phase&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="887839975118445">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="843911428298176" type="DeathBlock">
+                    <param id="0" name="Object">P1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="910516625841878" type="P1" />
+            </actions>
+        </event-block>
+        <event-block sid="488412424644520">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="922574940545345" type="DeathBlock">
+                    <param id="0" name="Object">P2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="582825000672069" type="P2" />
             </actions>
         </event-block>
     </events>

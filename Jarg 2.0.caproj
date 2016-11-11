@@ -23,6 +23,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -301,6 +302,38 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PlayerOnly" sid="290677114097975">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="432867430745041">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="295463868489363" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Move" sid="455306118345127">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="624462086320408">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="833304805329033">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="107473484526261">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="591720616965601" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -310,6 +343,8 @@
         <layout>Candyland.xml</layout>
         <layout>Thunderstorm.xml</layout>
         <layout>Encounter.xml</layout>
+        <layout>Hostile.xml</layout>
+        <layout>Sinking.xml</layout>
         <layout>End.xml</layout>
         <layout>Help.xml</layout>
     </layout-folder>

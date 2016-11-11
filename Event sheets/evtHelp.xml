@@ -9,7 +9,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="412508073629328" type="Text4">
-                    <param id="0" name="Text">&quot;Player 1&quot; &amp; newline &amp; &quot;W, A, S, D to move&quot; &amp; newline &amp; &quot;E to fire&quot; &amp; newline &amp; &quot;Q, R for special move&quot; &amp; newline &amp; newline &amp; &quot;Player 2&quot; &amp; newline &amp; &quot;O, K, L, ; to move&quot; &amp; newline &amp; &quot;I to fire&quot; &amp; newline &amp; &quot;P, U for special move&quot;</param>
+                    <param id="0" name="Text">&quot;Player 1&quot; &amp; newline &amp; &quot;W, A, S, D to move&quot; &amp; newline &amp; &quot;E to fire&quot; &amp; newline &amp; &quot;Q, R, C for special move&quot; &amp; newline &amp; newline &amp; &quot;Player 2&quot; &amp; newline &amp; &quot;O, K, L, ; to move&quot; &amp; newline &amp; &quot;I to fire&quot; &amp; newline &amp; &quot;P, U, M for special move&quot;</param>
                 </action>
             </actions>
         </event-block>

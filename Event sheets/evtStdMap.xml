@@ -319,11 +319,13 @@
                 </action>
             </actions>
         </event-block>
+        <comment>In game music should be configured after the first line</comment>
         <event-block sid="684557100703644">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="685851203342322" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="195928320911283" type="Audio" />
                 <action id="-9" name="Set value" sid="880937488142786" type="System">
                     <param id="0" name="Variable">p1_score</param>
                     <param id="1" name="Value">0</param>

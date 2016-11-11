@@ -23,5 +23,20 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Note: &quot;X Is any playing&quot; is the correct condition. &quot;Is slient&quot; means something else.</comment>
+        <event-block sid="423964936713607">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="669061075036542" type="System" />
+                <condition id="4" inverted="1" name="Is any playing" sid="300607075308392" type="Audio" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="835582731524281" type="Audio">
+                    <param id="0" name="Audio file">plankp-Jarg-2.0-Entry-Music</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

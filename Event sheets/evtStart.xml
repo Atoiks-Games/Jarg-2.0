@@ -32,33 +32,11 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="500617787673985" type="StartBtn" />
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="554130872247664">
-                    <conditions>
-                        <condition id="4" name="Compare selected item text" sid="184291627357615" type="mapselList">
-                            <param id="0" name="Text to compare">&quot;-&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="639621636265528" type="Text3" />
-                    </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="786234360638399" type="System">
-                            <param id="0" name="Layout">&quot;Easter Egg&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="315511234568385">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="797399632291785" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-25" name="Go to layout (by name)" sid="430662894420448" type="System">
-                            <param id="0" name="Layout">mapselList.SelectedText</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="430662894420448" type="System">
+                    <param id="0" name="Layout">mapselList.SelectedText</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="305056040617300">
             <conditions>
@@ -68,6 +46,18 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="12" name="Fall through" sid="989360556618630" type="Text3" />
+            </actions>
+        </event-block>
+        <event-block sid="272012884598834">
+            <conditions>
+                <condition id="17" name="On tap object" sid="881137189876907" type="Touch">
+                    <param id="0" name="Object">EEggBtn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="786234360638399" type="System">
+                    <param id="0" name="Layout">&quot;Easter Egg&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -64,7 +64,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -93,7 +93,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -212,7 +212,7 @@
                 </instance>
                 <instance type="mapselList" uid="80">
                     <properties>
-                        <items>Arena; Pitfall; Candyland; Thunderstorm; Encounter; Hostile; Sinking</items>
+                        <items>-; Arena; Pitfall; Candyland; Thunderstorm; Encounter; Hostile; Sinking; Blender; -</items>
                         <tooltip>The map you will be playing in</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>

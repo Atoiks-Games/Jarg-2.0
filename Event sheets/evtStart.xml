@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evtStart</name>
     <events>
-        <variable constant="0" name="Play" sid="152034054549617" static="0" type="number">0</variable>
         <event-block sid="562779307663645">
             <conditions>
                 <condition id="0" name="On clicked" sid="356269254945163" type="HelpBtn" />

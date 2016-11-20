@@ -418,7 +418,6 @@
         <event-sheet>evtStart.xml</event-sheet>
         <event-sheet>evtHelp.xml</event-sheet>
         <event-sheet>Easter Egg.xml</event-sheet>
-        <event-sheet>ConfirmPlay.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="6" />

@@ -2,7 +2,7 @@
 <c2layout>
     <name>Inverse</name>
     <sid>878696301293026</sid>
-    <event-sheet>ConfirmPlay</event-sheet>
+    <event-sheet>evtStdMap</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

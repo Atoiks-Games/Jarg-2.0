@@ -2,7 +2,7 @@
 <c2layout>
     <name>Chaos</name>
     <sid>988158393905003</sid>
-    <event-sheet>ConfirmPlay</event-sheet>
+    <event-sheet>evtStdMap</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

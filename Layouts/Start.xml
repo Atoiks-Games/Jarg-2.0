@@ -285,7 +285,7 @@
                 </instance>
                 <instance type="gravityModifier" uid="471">
                     <properties>
-                        <value>0</value>
+                        <value>1</value>
                         <minimum>-50</minimum>
                         <maximum>50</maximum>
                         <step>1</step>

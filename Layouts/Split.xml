@@ -2,7 +2,7 @@
 <c2layout>
     <name>Split</name>
     <sid>765087381230576</sid>
-    <event-sheet>ConfirmPlay</event-sheet>
+    <event-sheet>evtStdMap</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

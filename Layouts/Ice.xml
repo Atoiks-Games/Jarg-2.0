@@ -2,7 +2,7 @@
 <c2layout>
     <name>Ice</name>
     <sid>330177671155967</sid>
-    <event-sheet>ConfirmPlay</event-sheet>
+    <event-sheet>evtStdMap</event-sheet>
     <size>
         <width>855</width>
         <height>960</height>

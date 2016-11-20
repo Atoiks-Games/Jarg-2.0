@@ -2,7 +2,7 @@
 <c2layout>
     <name>Fire</name>
     <sid>387687194287022</sid>
-    <event-sheet>evtStdMap</event-sheet>
+    <event-sheet>ConfirmPlay</event-sheet>
     <size>
         <width>855</width>
         <height>960</height>

@@ -2,7 +2,7 @@
 <c2layout>
     <name>Hostile</name>
     <sid>587172510149851</sid>
-    <event-sheet>evtStdMap</event-sheet>
+    <event-sheet>ConfirmPlay</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

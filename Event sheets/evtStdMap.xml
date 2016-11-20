@@ -75,6 +75,9 @@
                     <param id="0" name="Object">P2</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="615309470695418" type="P1">
+                    <param id="0" name="Vector Y">750/22*(Gravity+1)</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="781806273412265">
@@ -229,6 +232,9 @@
                     <param id="0" name="Object">P1</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="288472622875971" type="P2">
+                    <param id="0" name="Vector Y">750/22*(Gravity+1)</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="743130898230667">
@@ -352,6 +358,15 @@
                     <param id="0" name="Variable">p2_uid</param>
                     <param id="1" name="Value">p2.UID</param>
                 </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="739313677140210" type="P1">
+                    <param id="0" name="Gravity">Gravity*(1500/22)</param>
+                </action>
+                <action behavior="Bullet" id="2" name="Set gravity" sid="338729833525431" type="Bullet">
+                    <param id="0" name="Gravity">Gravity</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="523666495447921" type="P2">
+                    <param id="0" name="Gravity">Gravity*(1500/22)</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="963065887396428">
@@ -364,8 +379,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="2" name="Set gravity" sid="738550858558753" type="Bullet">
-                    <param id="0" name="Gravity">-(Bullet.Bullet.Gravity)</param>
+                <action id="-9" name="Set value" sid="781991159393274" type="System">
+                    <param id="0" name="Variable">Gravity</param>
+                    <param id="1" name="Value">-Gravity</param>
+                </action>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="957507698482317" type="P1Spawn">
+                    <param id="0" name="Gravity">Gravity</param>
                 </action>
             </actions>
             <sub-events>
@@ -373,43 +392,39 @@
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="910522051621188" type="System">
                             <param id="0" name="Variable">Gravity</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">22</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="781991159393274" type="System">
+                        <action behavior="Platform" id="5" name="Set gravity" sid="511318497102381" type="P1">
+                            <param id="0" name="Gravity">P1.Platform.Gravity</param>
+                        </action>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="785271246070013" type="P2">
+                            <param id="0" name="Gravity">P2.Platform.Gravity</param>
+                        </action>
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="607934290101698" type="Bullet">
+                            <param id="0" name="Gravity">Bullet.Bullet.Gravity</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="800429568776318">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="258603983476616" type="System">
                             <param id="0" name="Variable">Gravity</param>
-                            <param id="1" name="Value">-22</param>
-                        </action>
-                        <action behavior="Physics" id="12" name="Set world gravity" sid="957507698482317" type="P1Spawn">
-                            <param id="0" name="Gravity">Gravity</param>
-                        </action>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action behavior="Platform" id="5" name="Set gravity" sid="314898103414065" type="P1">
                             <param id="0" name="Gravity">-P1.Platform.Gravity</param>
                         </action>
                         <action behavior="Platform" id="5" name="Set gravity" sid="578926852785248" type="P2">
                             <param id="0" name="Gravity">-P2.Platform.Gravity</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="800429568776318">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="258603983476616" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="135690324594611" type="System">
-                            <param id="0" name="Variable">Gravity</param>
-                            <param id="1" name="Value">22</param>
-                        </action>
-                        <action behavior="Physics" id="12" name="Set world gravity" sid="973647227334911" type="P1Spawn">
-                            <param id="0" name="Gravity">Gravity</param>
-                        </action>
-                        <action behavior="Platform" id="5" name="Set gravity" sid="511318497102381" type="P1">
-                            <param id="0" name="Gravity">P1.Platform.Gravity</param>
-                        </action>
-                        <action behavior="Platform" id="5" name="Set gravity" sid="785271246070013" type="P2">
-                            <param id="0" name="Gravity">P2.Platform.Gravity</param>
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="738550858558753" type="Bullet">
+                            <param id="0" name="Gravity">-Bullet.Bullet.Gravity</param>
                         </action>
                     </actions>
                 </event-block>
@@ -418,6 +433,11 @@
         <event-block sid="460359338620812">
             <conditions>
                 <condition id="-1" name="Every tick" sid="827935395170175" type="System" />
+                <condition id="-14" name="Compare variable" sid="506051393611844" type="System">
+                    <param id="0" name="Variable">Play</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

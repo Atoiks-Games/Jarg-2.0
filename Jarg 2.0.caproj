@@ -364,6 +364,9 @@
         <object-type name="Touch" sid="448889585941099">
             <plugin id="Touch" />
         </object-type>
+        <object-type name="GravityList" sid="750569123993859">
+            <plugin id="List" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -408,6 +411,7 @@
         <event-sheet>evtStart.xml</event-sheet>
         <event-sheet>evtHelp.xml</event-sheet>
         <event-sheet>Easter Egg.xml</event-sheet>
+        <event-sheet>ConfirmPlay.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="6" />

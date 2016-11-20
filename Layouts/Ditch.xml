@@ -2,7 +2,7 @@
 <c2layout>
     <name>Ditch</name>
     <sid>307067529890002</sid>
-    <event-sheet>evtStdMap</event-sheet>
+    <event-sheet>ConfirmPlay</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

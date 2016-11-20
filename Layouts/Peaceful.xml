@@ -2,7 +2,7 @@
 <c2layout>
     <name>Peaceful</name>
     <sid>817738629930592</sid>
-    <event-sheet>evtStdMap</event-sheet>
+    <event-sheet>ConfirmPlay</event-sheet>
     <size>
         <width>855</width>
         <height>480</height>

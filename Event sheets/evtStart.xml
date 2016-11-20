@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evtStart</name>
     <events>
+        <variable constant="0" name="Play" sid="152034054549617" static="0" type="number">0</variable>
+        <include>evtStdMap</include>
         <event-block sid="562779307663645">
             <conditions>
                 <condition id="0" name="On clicked" sid="356269254945163" type="HelpBtn" />
@@ -32,11 +34,65 @@
             <conditions>
                 <condition id="0" name="On clicked" sid="500617787673985" type="StartBtn" />
             </conditions>
-            <actions>
-                <action id="-25" name="Go to layout (by name)" sid="430662894420448" type="System">
-                    <param id="0" name="Layout">mapselList.SelectedText</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="352359142087816">
+                    <conditions>
+                        <condition id="4" name="Compare selected item text" sid="902579523968004" type="mapselList">
+                            <param id="0" name="Text to compare">&quot;Random&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="387590989971611" type="System">
+                            <param id="0" name="Layout">mapselList.ItemTextAt(Random(2,31))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600627510657413">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="593820979301597" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="430662894420448" type="System">
+                            <param id="0" name="Layout">mapselList.SelectedText</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="366519773086780">
+            <conditions>
+                <condition id="0" name="On clicked" sid="412487734244687" type="StartBtn" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="146449470462223">
+                    <conditions>
+                        <condition id="4" name="Compare selected item text" sid="155150028497652" type="GravityList">
+                            <param id="0" name="Text to compare">&quot;Random&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="273125481077228" type="System">
+                            <param id="0" name="Variable">Gravity</param>
+                            <param id="1" name="Value">random(-44, 44)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="842804091922779">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="305953797729232" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="863735618278502" type="System">
+                            <param id="0" name="Variable">Gravity</param>
+                            <param id="1" name="Value">Gravity*int(GravityList.SelectedText)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="305056040617300">
             <conditions>

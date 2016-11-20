@@ -53,6 +53,7 @@
                 <condition id="17" name="On tap object" sid="881137189876907" type="Touch">
                     <param id="0" name="Object">EEggBtn</param>
                 </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="969846595616346" type="Text3" />
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="786234360638399" type="System">

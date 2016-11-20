@@ -212,7 +212,7 @@
                 </instance>
                 <instance type="mapselList" uid="80">
                     <properties>
-                        <items>Arena; Pitfall; Candyland; Thunderstorm; Encounter; Hostile; Sinking; Blender</items>
+                        <items>Arena; Pitfall; Candyland; Thunderstorm; Encounter; Hostile; Sinking; Blender; Layered; Box; Chaos; Rotate; Fire; Face; Inverse; Zone; Ice; Rectangle; Ditch; Vines; Mirror; Spin; Bouncy; Bot; Peaceful; Vectors; Flip; Divided; Split; Order</items>
                         <tooltip>The map you will be playing in</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>

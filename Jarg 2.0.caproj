@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -364,8 +365,14 @@
         <object-type name="Touch" sid="448889585941099">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="GravityList" sid="750569123993859">
-            <plugin id="List" />
+        <object-type name="gravityModifier" sid="225671008888229">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="gravityRandom" sid="666202869383402">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="gravityTxt" sid="847075744239875">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

@@ -4,7 +4,6 @@
     <name>evtStart</name>
     <events>
         <variable constant="0" name="Play" sid="152034054549617" static="0" type="number">0</variable>
-        <include>evtStdMap</include>
         <event-block sid="562779307663645">
             <conditions>
                 <condition id="0" name="On clicked" sid="356269254945163" type="HelpBtn" />
@@ -69,15 +68,12 @@
             <sub-events>
                 <event-block sid="146449470462223">
                     <conditions>
-                        <condition id="4" name="Compare selected item text" sid="155150028497652" type="GravityList">
-                            <param id="0" name="Text to compare">&quot;Random&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
+                        <condition id="1" name="Is checked" sid="908347894999972" type="gravityRandom" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="273125481077228" type="System">
                             <param id="0" name="Variable">Gravity</param>
-                            <param id="1" name="Value">random(-44, 44)</param>
+                            <param id="1" name="Value">random(-50, 50)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -86,9 +82,9 @@
                         <condition id="-22" name="Else" sid="305953797729232" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="863735618278502" type="System">
+                        <action id="-9" name="Set value" sid="737981767226158" type="System">
                             <param id="0" name="Variable">Gravity</param>
-                            <param id="1" name="Value">Gravity*int(GravityList.SelectedText)</param>
+                            <param id="1" name="Value">Gravity * gravityModifier.Value</param>
                         </action>
                     </actions>
                 </event-block>
@@ -114,6 +110,52 @@
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="786234360638399" type="System">
                     <param id="0" name="Layout">&quot;Easter Egg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="918948859936988">
+            <conditions>
+                <condition id="1" name="Is checked" sid="951248109316747" type="gravityRandom" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set enabled" sid="195155166428151" type="gravityModifier">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set text" sid="811488132680105" type="gravityTxt">
+                    <param id="0" name="Text">&quot;Gravity modified is randomized&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350024677263178">
+            <conditions>
+                <condition id="-22" name="Else" sid="178063584646610" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set enabled" sid="471754086847496" type="gravityModifier">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="0" name="Set text" sid="948989725896794" type="gravityTxt">
+                    <param id="0" name="Text">&quot;Gravity modified is &quot; &amp; gravityModifier.Value</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106341679728992">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="620952205346875" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="500563740458383" type="gravityTxt">
+                    <param id="0" name="Text">&quot;Gravity modified is &quot; &amp; gravityModifier.Value</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970171636786845">
+            <conditions>
+                <condition id="2" name="On changed" sid="286786532803862" type="gravityModifier" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="649145505614062" type="gravityTxt">
+                    <param id="0" name="Text">&quot;Gravity modified is &quot; &amp; gravityModifier.Value</param>
                 </action>
             </actions>
         </event-block>

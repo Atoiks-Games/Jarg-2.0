@@ -283,28 +283,79 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GravityList" uid="470">
+                <instance type="gravityModifier" uid="471">
                     <properties>
-                        <items>2; 1; .5; 0; -.5; -1; -2; Random</items>
-                        <tooltip></tooltip>
+                        <value>0</value>
+                        <minimum>-50</minimum>
+                        <maximum>50</maximum>
+                        <step>1</step>
+                        <tooltip>Modifies the gravity</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
-                        <type>Dropdown list</type>
-                        <multi-select>No</multi-select>
-                        <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>57</x>
-                        <y>335</y>
+                        <x>38</x>
+                        <y>330</y>
                         <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
+                        <width>200</width>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="gravityRandom" uid="480">
+                    <properties>
+                        <type>Checkbox</type>
+                        <text>Random Gravity?</text>
+                        <tooltip>Random Gravity?</tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>38</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>153</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="gravityTxt" uid="470">
+                    <properties>
+                        <text>This text will be replaced</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>38</x>
+                        <y>300</y>
+                        <z>0</z>
+                        <width>294</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

@@ -8,10 +8,22 @@
                 <condition id="-2" name="On start of layout" sid="289162498106517" type="System" />
             </conditions>
             <actions>
-                <action id="-16" name="Wait" sid="285591389581421" type="System">
-                    <param id="0" name="Seconds">0.5</param>
+                <action id="33" name="Stop all" sid="743940290255948" type="Audio" />
+                <action id="0" name="Play" sid="713347098170671" type="Audio">
+                    <param id="0" name="Audio file">Dhaka</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="241640356828394" type="System">
+            </actions>
+        </event-block>
+        <event-block sid="881125035021867">
+            <conditions>
+                <condition id="0" name="On clicked" sid="108921315919732" type="ToHomeBtn" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="294658094017186" type="Audio" />
+                <action id="-2" name="Go to layout" sid="994930736994465" type="System">
                     <param id="0" name="Layout">Start</param>
                 </action>
             </actions>
